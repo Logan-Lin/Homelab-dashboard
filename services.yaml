@@ -13,20 +13,6 @@ services:
     description: Media streaming server
     icon: /assets/img/emby.webp
     icon_dark: /assets/img/emby_dark.webp
-  - name: Overseerr
-    host: nas
-    export: true
-    url: https://seerr.yanlincs.com
-    description: Media request manager
-    icon: /assets/img/overseerr.webp
-    icon_dark: /assets/img/overseerr_dark.webp
-  - name: Tautulli
-    host: nas
-    export: true
-    url: https://tautu.yanlincs.com
-    description: Media server monitoring
-    icon: /assets/img/tautulli.webp
-    icon_dark: /assets/img/tautulli_dark.webp
   - name: Gitea
     host: nas
     export: true
@@ -57,44 +43,32 @@ services:
     url: https://latex.yanlincs.com
     description: Collaborative LaTeX editor
     icon: /assets/img/overleaf.webp
-  - name: linkding
-    host: nas
-    export: true
-    url: https://link.yanlincs.com
-    description: Bookmark manager
-    icon: /assets/img/linkding.webp
-  - name: WebDAV
-    host: nas
-    export: true
-    url: https://dav.yanlincs.com
-    description: HTTP-based file server
-    icon: /assets/img/webdav.webp
-    icon_dark: /assets/img/webdav_dark.webp
-  - name: PairDrop
-    host: nas
-    export: true
-    url: https://drop.yanlincs.com
-    description: P2P file sharing service
-    icon: /assets/img/pairdrop.webp
-  - name: Gotify
-    host: hetzner
-    export: true
-    url: https://notify.yanlincs.com
-    description: Message distribution server
-    icon: /assets/img/gotify.webp
-  - name: NPM
-    host: hetzner
-    export: true
-    url: https://proxy.yanlincs.com
-    description: Ngnix proxy manager
-    icon: /assets/img/nginx.webp
-
 
   - name: Nas
     export: false
     url: https://nas.yanlincs.com
     description: Unraid home server
     icon: /assets/img/unraid.webp
+  - name: linkding
+    host: nas
+    export: false
+    url: https://link.nas.yanlincs.com
+    description: Bookmark manager
+    icon: /assets/img/linkding.webp
+  - name: Paperless-ngx
+    host: nas
+    export: false
+    url: https://paperless.nas.yanlincs.com
+    description: Document management
+    icon: /assets/img/paperless.webp
+    icon_dark: /assets/img/paperless_dark.webp
+  - name: Tautulli
+    host: nas
+    export: false
+    url: https://tautu.nas.yanlincs.com
+    description: Media server monitoring
+    icon: /assets/img/tautulli.webp
+    icon_dark: /assets/img/tautulli_dark.webp
   - name: Sonarr
     host: nas
     export: false
@@ -145,6 +119,19 @@ services:
     url: https://trans.nas.yanlincs.com
     description: BitTorrent client
     icon: /assets/img/transmission.webp
+  - name: WebDAV
+    host: nas
+    export: false
+    url: https://dav.nas.yanlincs.com
+    description: HTTP-based file server
+    icon: /assets/img/webdav.webp
+    icon_dark: /assets/img/webdav_dark.webp
+  - name: PairDrop
+    host: nas
+    export: false
+    url: https://drop.nas.yanlincs.com
+    description: P2P file sharing service
+    icon: /assets/img/pairdrop.webp
 
   - name: Rpi
     export: false

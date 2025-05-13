@@ -177,7 +177,7 @@ def health_check_worker():
             logger.info(f"Recovery notification sent: {notify_resp}")
         
         # Sleep for 5 minutes before next check
-        time.sleep(os.getenv("CHECK_INTERVAL", 300))
+        time.sleep(int(os.getenv("CHECK_INTERVAL", 300)))
 
 
 is_preproduction = os.getenv("PREPRODUCTION", "false").lower() == "true"
