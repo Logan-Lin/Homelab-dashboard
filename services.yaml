@@ -1,0 +1,206 @@
+services:
+  - name: Plex
+    host: nas
+    export: true
+    url: https://plex.yanlincs.com
+    description: Media streaming server
+    icon: /assets/img/plex.webp
+    icon_dark: /assets/img/plex_dark.webp
+  - name: Emby
+    host: nas
+    export: true
+    url: https://emby.yanlincs.com
+    description: Media streaming server
+    icon: /assets/img/emby.webp
+    icon_dark: /assets/img/emby_dark.webp
+  - name: Overseerr
+    host: nas
+    export: true
+    url: https://seerr.yanlincs.com
+    description: Media request manager
+    icon: /assets/img/overseerr.webp
+    icon_dark: /assets/img/overseerr_dark.webp
+  - name: Tautulli
+    host: nas
+    export: true
+    url: https://tautu.yanlincs.com
+    description: Media server monitoring
+    icon: /assets/img/tautulli.webp
+    icon_dark: /assets/img/tautulli_dark.webp
+  - name: Gitea
+    host: nas
+    export: true
+    url: https://git.yanlincs.com
+    description: Git and development platform
+    icon: /assets/img/gitea.webp
+  - name: Nextcloud
+    host: nas
+    export: true
+    url: https://cloud.yanlincs.com
+    description: Cloud storage and office suite
+    icon: /assets/img/nextcloud.webp
+  - name: immich
+    host: nas
+    export: true
+    url: https://photo.yanlincs.com
+    description: Home photo server
+    icon: /assets/img/immich.webp
+  - name: Docmost
+    host: nas
+    export: true
+    url: https://note.yanlincs.com
+    description: Collaborative document editor
+    icon: /assets/img/docmost.webp
+  - name: Overleaf
+    host: nas
+    export: true
+    url: https://latex.yanlincs.com
+    description: Collaborative LaTeX editor
+    icon: /assets/img/overleaf.webp
+  - name: linkding
+    host: nas
+    export: true
+    url: https://link.yanlincs.com
+    description: Bookmark manager
+    icon: /assets/img/linkding.webp
+  - name: WebDAV
+    host: nas
+    export: true
+    url: https://dav.yanlincs.com
+    description: HTTP-based file server
+    icon: /assets/img/webdav.webp
+    icon_dark: /assets/img/webdav_dark.webp
+  - name: PairDrop
+    host: nas
+    export: true
+    url: https://drop.yanlincs.com
+    description: P2P file sharing service
+    icon: /assets/img/pairdrop.webp
+  - name: Gotify
+    host: hetzner
+    export: true
+    url: https://notify.yanlincs.com
+    description: Message distribution server
+    icon: /assets/img/gotify.webp
+  - name: NPM
+    host: hetzner
+    export: true
+    url: https://proxy.yanlincs.com
+    description: Ngnix proxy manager
+    icon: /assets/img/nginx.webp
+
+
+  - name: Nas
+    export: false
+    url: https://nas.yanlincs.com
+    description: Unraid home server
+    icon: /assets/img/unraid.webp
+  - name: Sonarr
+    host: nas
+    export: false
+    url: https://sonarr.nas.yanlincs.com
+    description: TV series management
+    icon: /assets/img/sonarr.webp
+  - name: Radarr
+    host: nas
+    export: false
+    url: https://radarr.nas.yanlincs.com
+    description: Movie management
+    icon: /assets/img/radarr.webp
+    icon_dark: /assets/img/radarr_dark.webp
+  - name: Lidarr
+    host: nas
+    export: false
+    url: https://lidarr.nas.yanlincs.com
+    description: Music management
+    icon: /assets/img/lidarr.webp
+  - name: Bazarr
+    host: nas
+    export: false
+    url: https://bazarr.nas.yanlincs.com
+    description: Subtitle management
+    icon: /assets/img/bazarr.webp
+  - name: Pi-hole
+    host: nas
+    export: false
+    url: https://pihole.nas.yanlincs.com/admin
+    description: DNS-based ad blocker
+    icon: /assets/img/pihole.webp
+    icon_dark: /assets/img/pihole_dark.webp
+  - name: Syncthing
+    host: nas
+    export: false
+    url: https://syncthing.nas.yanlincs.com
+    description: P2P file sync
+    icon: /assets/img/syncthing.webp
+  - name: qBittorrent
+    host: nas
+    export: false
+    url: https://qbit.nas.yanlincs.com
+    description: BitTorrent client
+    icon: /assets/img/qbittorrent.webp
+  - name: Transmission
+    host: nas
+    export: false
+    url: https://trans.nas.yanlincs.com
+    description: BitTorrent client
+    icon: /assets/img/transmission.webp
+
+  - name: Rpi
+    export: false
+    url: https://proxy.pi.yanlincs.com
+    description: Raspberry Pi 5
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp
+  - name: Pi-hole
+    host: rpi
+    export: false
+    url: https://pihole.pi.yanlincs.com/admin
+    description: DNS-based ad blocker
+    icon: /assets/img/pihole.webp
+    icon_dark: /assets/img/pihole_dark.webp
+  - name: Syncthing
+    host: rpi
+    export: false
+    url: https://syncthing.pi.yanlincs.com
+    description: P2P file sync
+    icon: /assets/img/syncthing.webp
+  - name: Gitea
+    host: rpi
+    export: false
+    url: https://git.pi.yanlincs.com
+    description: Git and development platform
+    icon: /assets/img/gitea.webp
+  - name: Docmost
+    host: rpi
+    export: false
+    url: https://note.pi.yanlincs.com
+    description: Collaborative document editor
+    icon: /assets/img/docmost.webp
+  - name: linkding
+    host: rpi
+    export: false
+    url: https://link.pi.yanlincs.com
+    description: Bookmark manager
+    icon: /assets/img/linkding.webp
+
+  - name: Rpi CM
+    export: false
+    url: https://proxy.cm.yanlincs.com
+    description: Compute Module 5
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp 
+
+  - name: Rpi Zero
+    export: false
+    url: http://zero.hw.yanlincs.com
+    description: Raspberry Pi Zero 2W
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp 
+
+  - name: Router
+    export: false
+    url: http://router.hw.yanlincs.com
+    description: OpenWRT home router
+    icon: /assets/img/openwrt.webp
+    icon_dark: /assets/img/openwrt_dark.webp
