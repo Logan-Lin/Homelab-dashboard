@@ -44,11 +44,38 @@ services:
     description: Collaborative LaTeX editor
     icon: /assets/img/overleaf.webp
 
+  # Hardwares
   - name: Nas
     export: false
     url: https://nas.yanlincs.com
     description: Unraid home server
     icon: /assets/img/unraid.webp
+  - name: Rpi
+    export: false
+    url: https://proxy.pi.yanlincs.com
+    description: Raspberry Pi 5
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp
+  - name: Rpi CM
+    export: false
+    url: https://proxy.cm.yanlincs.com
+    description: Compute Module 5
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp 
+  - name: Rpi Zero
+    export: false
+    url: http://zero.hw.yanlincs.com
+    description: Raspberry Pi Zero 2W
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp 
+  - name: Router
+    export: false
+    url: http://router.hw.yanlincs.com
+    description: OpenWRT home router
+    icon: /assets/img/openwrt.webp
+    icon_dark: /assets/img/openwrt_dark.webp
+
+  # Inner services on nas
   - name: linkding
     host: nas
     export: false
@@ -94,19 +121,6 @@ services:
     url: https://bazarr.nas.yanlincs.com
     description: Subtitle management
     icon: /assets/img/bazarr.webp
-  - name: Pi-hole
-    host: nas
-    export: false
-    url: https://pihole.nas.yanlincs.com/admin
-    description: DNS-based ad blocker
-    icon: /assets/img/pihole.webp
-    icon_dark: /assets/img/pihole_dark.webp
-  - name: Syncthing
-    host: nas
-    export: false
-    url: https://syncthing.nas.yanlincs.com
-    description: P2P file sync
-    icon: /assets/img/syncthing.webp
   - name: qBittorrent
     host: nas
     export: false
@@ -126,19 +140,8 @@ services:
     description: HTTP-based file server
     icon: /assets/img/webdav.webp
     icon_dark: /assets/img/webdav_dark.webp
-  - name: PairDrop
-    host: nas
-    export: false
-    url: https://drop.nas.yanlincs.com
-    description: P2P file sharing service
-    icon: /assets/img/pairdrop.webp
 
-  - name: Rpi
-    export: false
-    url: https://proxy.pi.yanlincs.com
-    description: Raspberry Pi 5
-    icon: /assets/img/rpi.webp
-    icon_dark: /assets/img/rpi_dark.webp
+  # Inner services on rpi
   - name: Pi-hole
     host: rpi
     export: false
@@ -152,42 +155,3 @@ services:
     url: https://syncthing.pi.yanlincs.com
     description: P2P file sync
     icon: /assets/img/syncthing.webp
-  - name: Gitea
-    host: rpi
-    export: false
-    url: https://git.pi.yanlincs.com
-    description: Git and development platform
-    icon: /assets/img/gitea.webp
-  - name: Docmost
-    host: rpi
-    export: false
-    url: https://note.pi.yanlincs.com
-    description: Collaborative document editor
-    icon: /assets/img/docmost.webp
-  - name: linkding
-    host: rpi
-    export: false
-    url: https://link.pi.yanlincs.com
-    description: Bookmark manager
-    icon: /assets/img/linkding.webp
-
-  - name: Rpi CM
-    export: false
-    url: https://proxy.cm.yanlincs.com
-    description: Compute Module 5
-    icon: /assets/img/rpi.webp
-    icon_dark: /assets/img/rpi_dark.webp 
-
-  - name: Rpi Zero
-    export: false
-    url: http://zero.hw.yanlincs.com
-    description: Raspberry Pi Zero 2W
-    icon: /assets/img/rpi.webp
-    icon_dark: /assets/img/rpi_dark.webp 
-
-  - name: Router
-    export: false
-    url: http://router.hw.yanlincs.com
-    description: OpenWRT home router
-    icon: /assets/img/openwrt.webp
-    icon_dark: /assets/img/openwrt_dark.webp
