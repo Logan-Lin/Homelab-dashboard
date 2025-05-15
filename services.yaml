@@ -47,18 +47,18 @@ services:
   # Hardwares
   - name: Nas
     export: false
-    url: https://nas.yanlincs.com
+    url: http://nas.hw.yanlincs.com
     description: Unraid home server
     icon: /assets/img/unraid.webp
   - name: Rpi
     export: false
-    url: https://proxy.pi.yanlincs.com
+    url: http://pi.hw.yanlincs.com
     description: Raspberry Pi 5
     icon: /assets/img/rpi.webp
     icon_dark: /assets/img/rpi_dark.webp
   - name: Rpi CM
     export: false
-    url: https://proxy.cm.yanlincs.com
+    url: http://cm.hw.yanlincs.com
     description: Compute Module 5
     icon: /assets/img/rpi.webp
     icon_dark: /assets/img/rpi_dark.webp 
@@ -89,13 +89,6 @@ services:
     description: Document management
     icon: /assets/img/paperless.webp
     icon_dark: /assets/img/paperless_dark.webp
-  - name: Tautulli
-    host: nas
-    export: false
-    url: https://tautu.nas.yanlincs.com
-    description: Media server monitoring
-    icon: /assets/img/tautulli.webp
-    icon_dark: /assets/img/tautulli_dark.webp
   - name: Sonarr
     host: nas
     export: false
@@ -127,12 +120,6 @@ services:
     url: https://qbit.nas.yanlincs.com
     description: BitTorrent client
     icon: /assets/img/qbittorrent.webp
-  - name: Transmission
-    host: nas
-    export: false
-    url: https://trans.nas.yanlincs.com
-    description: BitTorrent client
-    icon: /assets/img/transmission.webp
   - name: WebDAV
     host: nas
     export: false
