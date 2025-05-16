@@ -21,9 +21,10 @@ pkgs.mkShell {
     source ${venvPath}/bin/activate
     pip install -r requirements.txt
 
-    ${ if isDev then '' python app.py; '' else ''
+    ${ if isDev then '' python app.py && exit '' else ''
       rsync -avP --delete ./ ${remoteHost}:/root/homelab-dashboard --exclude .git
       ssh ${remoteHost} "cd /root/homelab-dashboard && docker compose down && docker compose up -d --build"
+      exit
     ''
     }
   '';
