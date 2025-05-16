@@ -56,12 +56,6 @@ services:
     description: Raspberry Pi 5
     icon: /assets/img/rpi.webp
     icon_dark: /assets/img/rpi_dark.webp
-  - name: Rpi CM
-    export: false
-    url: http://cm.hw.yanlincs.com
-    description: Compute Module 5
-    icon: /assets/img/rpi.webp
-    icon_dark: /assets/img/rpi_dark.webp 
   - name: Rpi Zero
     export: false
     url: http://zero.hw.yanlincs.com

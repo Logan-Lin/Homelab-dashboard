@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, isDev ? true }:
 
 pkgs.mkShell {
   packages = with pkgs; [
@@ -7,16 +7,24 @@ pkgs.mkShell {
     python312Packages.virtualenv
   ];
 
-  shellHook = ''
-    export VENV_PATH=~/venv/homelab
-    export PREPRODUCTION=true
+  shellHook = 
+    let venvPath = "$HOME/venv/homelab"; 
+        preproduction = if isDev then "true" else "false";
+        remoteHost = "hetzner";
+  in ''
+    export VENV_PATH=${venvPath}
+    export PREPRODUCTION=${preproduction}
 
-    if [ ! -d $VENV_PATH ]; then
-      python -m venv $VENV_PATH
+    if [ ! -d ${venvPath} ]; then
+      python -m venv ${venvPath}
     fi
-    source $VENV_PATH/bin/activate
+    source ${venvPath}/bin/activate
     pip install -r requirements.txt
-    
-    python app.py
+
+    ${ if isDev then '' python app.py; '' else ''
+      rsync -avP --delete ./ ${remoteHost}:/root/homelab-dashboard --exclude .git
+      ssh ${remoteHost} "cd /root/homelab-dashboard && docker compose down && docker compose up -d --build"
+    ''
+    }
   '';
 }

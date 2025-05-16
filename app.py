@@ -190,4 +190,4 @@ if __name__ == '__main__':
     if is_preproduction:
         app.run(host='0.0.0.0', port=8100, debug=True)
     else:
-        serve(app, host='0.0.0.0', port=8100, threads=16) 
+        serve(app, host='0.0.0.0', port=80, threads=16) 

@@ -4,8 +4,6 @@ services:
     container_name: homelab-dashboard
     networks:
       - proxy-network
-    ports:
-      - "8100:8100"
     restart: unless-stopped 
 
 networks:
