@@ -1,4 +1,28 @@
 services:
+  - name: Nextcloud
+    host: nas
+    export: true
+    url: https://cloud.yanlincs.com
+    description: Cloud storage and office suite
+    icon: /assets/img/nextcloud.webp
+  - name: Gitea
+    host: nas
+    export: true
+    url: https://git.yanlincs.com
+    description: Git and development platform
+    icon: /assets/img/gitea.webp
+  - name: Docmost
+    host: nas
+    export: true
+    url: https://note.yanlincs.com
+    description: Collaborative document editor
+    icon: /assets/img/docmost.webp
+  - name: Overleaf
+    host: nas
+    export: true
+    url: https://latex.yanlincs.com
+    description: Collaborative LaTeX editor
+    icon: /assets/img/overleaf.webp
   - name: Plex
     host: nas
     export: true
@@ -13,36 +37,12 @@ services:
     description: Media streaming server
     icon: /assets/img/emby.webp
     icon_dark: /assets/img/emby_dark.webp
-  - name: Gitea
-    host: nas
-    export: true
-    url: https://git.yanlincs.com
-    description: Git and development platform
-    icon: /assets/img/gitea.webp
-  - name: Nextcloud
-    host: nas
-    export: true
-    url: https://cloud.yanlincs.com
-    description: Cloud storage and office suite
-    icon: /assets/img/nextcloud.webp
   - name: immich
     host: nas
     export: true
     url: https://photo.yanlincs.com
     description: Home photo server
     icon: /assets/img/immich.webp
-  - name: Docmost
-    host: nas
-    export: true
-    url: https://note.yanlincs.com
-    description: Collaborative document editor
-    icon: /assets/img/docmost.webp
-  - name: Overleaf
-    host: nas
-    export: true
-    url: https://latex.yanlincs.com
-    description: Collaborative LaTeX editor
-    icon: /assets/img/overleaf.webp
 
   # Hardwares
   - name: Nas
@@ -80,9 +80,15 @@ services:
     host: nas
     export: false
     url: https://paperless.nas.yanlincs.com
-    description: Document management
+    description: Scanned document server
     icon: /assets/img/paperless.webp
     icon_dark: /assets/img/paperless_dark.webp
+  - name: audiobookshelf
+    host: nas
+    export: false
+    url: https://audio.nas.yanlincs.com
+    description: Audiobook and podcast server
+    icon: /assets/img/audiobookshelf.webp
   - name: Sonarr
     host: nas
     export: false
@@ -114,6 +120,12 @@ services:
     url: https://qbit.nas.yanlincs.com
     description: BitTorrent client
     icon: /assets/img/qbittorrent.webp
+  - name: Miniflux
+    host: nas
+    export: false
+    url: https://rss.nas.yanlincs.com
+    description: RSS feed aggregator
+    icon: /assets/img/miniflux.webp
   - name: WebDAV
     host: nas
     export: false
