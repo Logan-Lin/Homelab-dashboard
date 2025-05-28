@@ -5,18 +5,6 @@ services:
     url: https://cloud.yanlincs.com
     description: Cloud storage and office suite
     icon: /assets/img/nextcloud.webp
-  - name: Gitea
-    host: nas
-    export: true
-    url: https://git.yanlincs.com
-    description: Git and development platform
-    icon: /assets/img/gitea.webp
-  - name: Docmost
-    host: nas
-    export: true
-    url: https://note.yanlincs.com
-    description: Collaborative document editor
-    icon: /assets/img/docmost.webp
   - name: Overleaf
     host: nas
     export: true
@@ -54,6 +42,12 @@ services:
     export: false
     url: http://pi.hw.yanlincs.com
     description: Raspberry Pi 5
+    icon: /assets/img/rpi.webp
+    icon_dark: /assets/img/rpi_dark.webp
+  - name: CM
+    export: false
+    url: http://cm.hw.yanlincs.com
+    description: Rpi Compute Module 5
     icon: /assets/img/rpi.webp
     icon_dark: /assets/img/rpi_dark.webp
   - name: Rpi Zero
@@ -134,16 +128,18 @@ services:
     icon: /assets/img/webdav.webp
     icon_dark: /assets/img/webdav_dark.webp
 
-  # Inner services on rpi
+  # Inner services on CM
   - name: Pi-hole
-    host: rpi
+    host: CM
     export: false
-    url: https://pihole.pi.yanlincs.com/admin
+    url: https://pihole.cm.yanlincs.com/admin
     description: DNS-based ad blocker
     icon: /assets/img/pihole.webp
     icon_dark: /assets/img/pihole_dark.webp
+
+  # Inner services on Rpi
   - name: Syncthing
-    host: rpi
+    host: Rpi
     export: false
     url: https://syncthing.pi.yanlincs.com
     description: P2P file sync
