@@ -11,6 +11,12 @@ services:
     url: https://latex.yanlincs.com
     description: Collaborative LaTeX editor
     icon: /assets/img/overleaf.webp
+  - name: Docmost
+    host: nas
+    export: true
+    url: https://note.yanlincs.com
+    description: Collaborative markdown editor
+    icon: /assets/img/docmost.webp
   - name: Plex
     host: nas
     export: true
